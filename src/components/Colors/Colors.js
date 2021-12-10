@@ -4,7 +4,7 @@ import styles from "./Colors.module.css";
 import { useState, useEffect } from "react";
 
 const Colors = (props) => {
-  const [color, setColor] = useState("ffffff");
+  const [color, setColor] = useState("");
   const [isHex, setIsHex] = useState(false);
   const [colorLabel, setColorLabel] = useState("Enter a valid color.");
   const [textColor, setTextColor] = useState("black");
@@ -58,16 +58,18 @@ const Colors = (props) => {
   };
 
   useEffect(() => {
-    var element = document.getElementById("App");
-    var bgColor = window
-      .getComputedStyle(element, null)
-      .getPropertyValue("background-color");
-    var brightness = lightOrDark(bgColor);
-    console.log(bgColor);
-    if (brightness == "dark") {
-      setTextColor("white");
-    } else {
-      setTextColor("black");
+    if (color != "") {
+      var element = document.getElementById("App");
+      var bgColor = window
+        .getComputedStyle(element, null)
+        .getPropertyValue("background-color");
+      var brightness = lightOrDark(bgColor);
+      console.log(bgColor);
+      if (brightness == "dark") {
+        setTextColor("white");
+      } else {
+        setTextColor("black");
+      }
     }
   }, [colorLabel]);
 
