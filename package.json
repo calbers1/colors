@@ -1,5 +1,6 @@
 {
   "name": "colors",
+  "homepage": "https://calbers1.github.io/colors",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
