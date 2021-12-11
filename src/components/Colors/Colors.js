@@ -103,11 +103,7 @@ const Colors = (props) => {
   //using useEffect so that after the state vars get updated to the latest values, we can make sure that the text color is readable
   useEffect(() => {
     changeFontColor();
-  }, [
-    window
-      .getComputedStyle(document.getElementById("App"), null)
-      .getPropertyValue("background-color"),
-  ]);
+  });
 
   //credit to Gennady G/dandavis on SO: https://stackoverflow.com/questions/48484767/javascript-check-if-string-is-valid-css-color
   const isColor = (strColor) => {
