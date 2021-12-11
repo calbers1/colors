@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/colors/static/css/main.70adeff8.chunk.css",
-    "main.js": "/colors/static/js/main.822795c4.chunk.js",
-    "main.js.map": "/colors/static/js/main.822795c4.chunk.js.map",
+    "main.css": "/colors/static/css/main.3e3e9f10.chunk.css",
+    "main.js": "/colors/static/js/main.4e9b04cf.chunk.js",
+    "main.js.map": "/colors/static/js/main.4e9b04cf.chunk.js.map",
     "runtime-main.js": "/colors/static/js/runtime-main.3d193f77.js",
     "runtime-main.js.map": "/colors/static/js/runtime-main.3d193f77.js.map",
     "static/js/2.f3e2a3b6.chunk.js": "/colors/static/js/2.f3e2a3b6.chunk.js",
@@ -10,14 +10,14 @@
     "static/js/3.a335aa73.chunk.js": "/colors/static/js/3.a335aa73.chunk.js",
     "static/js/3.a335aa73.chunk.js.map": "/colors/static/js/3.a335aa73.chunk.js.map",
     "index.html": "/colors/index.html",
-    "static/css/main.70adeff8.chunk.css.map": "/colors/static/css/main.70adeff8.chunk.css.map",
+    "static/css/main.3e3e9f10.chunk.css.map": "/colors/static/css/main.3e3e9f10.chunk.css.map",
     "static/js/2.f3e2a3b6.chunk.js.LICENSE.txt": "/colors/static/js/2.f3e2a3b6.chunk.js.LICENSE.txt",
     "static/media/logo.6ce24c58.svg": "/colors/static/media/logo.6ce24c58.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.3d193f77.js",
     "static/js/2.f3e2a3b6.chunk.js",
-    "static/css/main.70adeff8.chunk.css",
-    "static/js/main.822795c4.chunk.js"
+    "static/css/main.3e3e9f10.chunk.css",
+    "static/js/main.4e9b04cf.chunk.js"
   ]
 }
