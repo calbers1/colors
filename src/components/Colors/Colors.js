@@ -80,12 +80,12 @@ const Colors = (props) => {
     for (var i = 0; i < 6; i++) {
       hexChars = hexChars + Math.floor(Math.random() * 16).toString(16);
     }
-    setColor(hexChars);
     props.setBackground(hexChars);
+    setColor(hexChars);
   };
 
-  //using useEffect so that after the state vars get updated to the latest values, we can make sure that the text color is readable
-  useEffect(() => {
+  //change the font color based on the background color/contrast
+  const changeFontColor = () => {
     if (color !== "") {
       var element = document.getElementById("App");
       var bgColor = window
@@ -98,7 +98,16 @@ const Colors = (props) => {
         setTextColor("black");
       }
     }
-  }, [color]);
+  };
+
+  //using useEffect so that after the state vars get updated to the latest values, we can make sure that the text color is readable
+  useEffect(() => {
+    changeFontColor();
+  }, [
+    window
+      .getComputedStyle(document.getElementById("App"), null)
+      .getPropertyValue("background-color"),
+  ]);
 
   //credit to Gennady G/dandavis on SO: https://stackoverflow.com/questions/48484767/javascript-check-if-string-is-valid-css-color
   const isColor = (strColor) => {
@@ -109,13 +118,19 @@ const Colors = (props) => {
 
   return (
     <div className={styles.Colors} data-testid="Colors">
-      <h1 className="ColorLabel" style={{ color: textColor }}>
+      <h1
+        className="ColorLabel"
+        style={{
+          color: textColor,
+        }}
+      >
         {colorLabel}
       </h1>
       <input
         type="text"
         name="color"
         onChange={updateColor}
+        style={{ color: textColor, borderColor: textColor }}
         value={color.trim()}
       ></input>
     </div>
