@@ -87,7 +87,7 @@ const Colors = (props) => {
   //change the font color based on the background color/contrast
   const changeFontColor = () => {
     if (color !== "") {
-      var element = document.getElementById("App");
+      var element = document.getElementById("colorIndicator");
       var bgColor = window
         .getComputedStyle(element, null)
         .getPropertyValue("background-color");

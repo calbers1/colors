@@ -4,7 +4,7 @@ import Colors from "./components/Colors/Colors";
 import { useState } from "react";
 function App() {
   const hexRegexp = new RegExp(/^([0-9a-f]{3}|[0-9a-f]{6})$/i);
-  const [bgColor, setBgColor] = useState(null);
+  const [bgColor, setBgColor] = useState("blanchedalmond");
   const setBackground = (color) => {
     if (hexRegexp.test(color)) {
       setBgColor(`#${color}`);
@@ -14,6 +14,7 @@ function App() {
   };
   return (
     <div style={{ backgroundColor: bgColor }} className="App" id="App">
+      <span style={{ backgroundColor: bgColor }} id="colorIndicator"></span>
       <Colors setBackground={setBackground} hexRegExp={hexRegexp}></Colors>
     </div>
   );
